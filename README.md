@@ -6,8 +6,8 @@ This is the backend for the RealtimeCollab application. It is built with Django 
 
 Before you begin, ensure you have the following installed on your system:
 
-- [Docker]
-- [Docker Compose]
+- Docker: [Install Docker](https://docs.docker.com/get-docker/)
+- Docker Compose: [Install Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Setup Instructions
 
@@ -17,25 +17,32 @@ Follow the steps below to set up and run the backend using Docker.
 
 First, clone the repository to your local machine:
 
+```bash
 git clone https://github.com/VishnuJampalaUB/realtimecollab-backend.git
 cd realtimecollab-backend
+```
 
 ### 2. Build and Run Docker Containers
 
+```bash
 docker-compose up --build
+```
 
 ### 3. Apply Migrations
 
+```bash
 docker-compose exec backend python manage.py migrate
+```
 
 ### 4. Create a Superuser
 
+```bash
 docker-compose exec backend python manage.py createsuperuser
+```
 
 ### 5. Access the Application
 
 The backend server will be running on http://localhost:8000.
-You can access the Django admin panel at http://localhost:8000/admin using the superuser credentials you created.
 
 ### 6. Configuration
 
