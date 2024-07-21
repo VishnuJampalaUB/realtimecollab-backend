@@ -39,8 +39,9 @@ You can access the Django admin panel at http://localhost:8000/admin using the s
 
 ### 6. Configuration
 
-The environment variables used in this project are defined in the docker-compose.yml file:
+The environment variables for this project are specified in the `docker-compose.yml` file. These settings are crucial for connecting to the database and securing the Django application.
 
+```yaml
 services:
   backend:
     environment:
@@ -49,11 +50,7 @@ services:
 
   db:
     environment:
-      POSTGRES_DB: collabdb
-      POSTGRES_USER: vishnu
-      POSTGRES_PASSWORD: vishnu123
+      - POSTGRES_DB=collabdb
+      - POSTGRES_USER=vishnu
+      - POSTGRES_PASSWORD=vishnu123
 
-### 7. Additional Information
-
-The backend code is located in the collaboration directory.
-The Django settings are configured in the realtimecollab/settings.py file.
