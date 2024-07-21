@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Document</title>
+</head>
+<body>
+    <h1>Edit Document</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="content" rows="10" cols="50">{{ document.content }}</textarea><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
