@@ -48,16 +48,4 @@ The backend server will be running on http://localhost:8000.
 
 The environment variables for this project are specified in the `docker-compose.yml` file. These settings are crucial for connecting to the database and securing the Django application.
 
-```yaml
-services:
-  backend:
-    environment:
-      - DATABASE_URL=postgres://vishnu:vishnu123@db:5432/collabdb
-      - SECRET_KEY=your_secret_key_here
-
-  db:
-    environment:
-      - POSTGRES_DB=collabdb
-      - POSTGRES_USER=vishnu
-      - POSTGRES_PASSWORD=vishnu123
 
